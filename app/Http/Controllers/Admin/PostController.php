@@ -94,7 +94,7 @@ class PostController extends Controller
 
    public function destroy($id){
     $post = Post::find($id);
-    $path = public_path().''.$post->image;
+    $path =public_path()."/uploads/image/post/".$post->image;
     if($path){
        @unlink($path);
     }
